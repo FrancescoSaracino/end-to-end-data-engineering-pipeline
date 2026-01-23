@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettaglio prodotto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1 id="nome"></h1>
+
+<img id="immagine" style="max-width:300px">
+
+<p><strong>Categoria:</strong> <span id="categoria"></span></p>
+<p><strong>Prezzo scontato:</strong> <span id="prezzo"></span> €</p>
+<p><strong>Valutazione:</strong> <span id="rating"></span></p>
+
+<p id="descrizione"></p>
+
+<a id="link" target="_blank">Vai al prodotto Amazon</a>
+
+<br><br>
+<a href="/">⬅ Torna alla lista</a>
+
+<script>
+const idProdotto = "{{ id_prodotto }}";
+
+fetch(`/amazon/${idProdotto}`)
+    .then(res => res.json())
+    .then(p => {
+        document.getElementById("nome").innerText = p.nome_prodotto;
+        document.getElementById("immagine").src = p.link_immagine;
+        document.getElementById("categoria").innerText = p.categoria;
+        document.getElementById("prezzo").innerText = p.prezzo_scontato;
+        document.getElementById("rating").innerText = p.valutazione_media;
+        document.getElementById("descrizione").innerText = p.descrizione_prodotto;
+        document.getElementById("link").href = p.link_prodotto;
+    });
+</script>
+
+</body>
+</html>
