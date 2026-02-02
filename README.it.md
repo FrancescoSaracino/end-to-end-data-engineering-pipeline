@@ -1,6 +1,6 @@
 [English](README.md) | [Italiano](README.it.md)
 
-# Progetto End-to-End di Data Engineering
+# Pipeline End-to-End di Data Engineering
 
 ## 📌 Panoramica
 
