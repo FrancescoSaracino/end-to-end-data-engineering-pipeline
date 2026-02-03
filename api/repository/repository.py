@@ -1,5 +1,5 @@
 import os
-import pymysql
+import psycopg2
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -8,12 +8,12 @@ load_dotenv()
 class Repository:    # metodo per ottenimento connessione al db
 
     def get_connection(self):
-        return pymysql.connect(
+        return psycopg2.connect(
             host=os.getenv("DB_HOST", "localhost"),
-            port=int(os.getenv("DB_PORT", 3306)),
-            user=os.getenv("DB_USER", "root"),
-            password=os.getenv("DB_PASSWORD"),
-            database=os.getenv("DB_NAME", "amazon_sales")
+            port=int(os.getenv("DB_PORT", 5432)),
+            user=os.getenv("DB_USER", "postgres"),
+            password=os.getenv("DB_PASSWORD", "postgres"),
+            dbname=os.getenv("DB_NAME", "amazon_sales")
         )
 
     # metodo generico standard di manipolazione dati
