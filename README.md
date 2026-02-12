@@ -4,8 +4,6 @@
 
 ## 📌 Overview
 
-This project was developed as part of an intensive **Junior Data Engineer training program** and serves as a practical implementation of an **end-to-end data pipeline**.
-
 The goal is to design and implement a complete data workflow covering the entire data lifecycle: from data ingestion and transformation, to API exposure and data visualization.
 
 The project is intended as a hands-on demonstration of core **data engineering concepts**, data integration, and analytical processing.
@@ -100,7 +98,7 @@ project_root/
 │       └── amazon_pipeline.py     # specific pipeline (entry point)
 ├── bi/
 │   └── dashboard.pbix              # Power BI dashboard
-└── database/
+└── db/
     └── schema.sql
 ```
 ---

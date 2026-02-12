@@ -4,9 +4,6 @@
 
 ## 📌 Panoramica
 
-Questo progetto è stato sviluppato come lavoro finale di un **percorso intensivo di formazione per Junior Data Engineer**  
-e rappresenta un’implementazione pratica di una **pipeline di data engineering end-to-end**.
-
 L’obiettivo è progettare e realizzare un flusso completo di gestione dei dati, coprendo l’intero ciclo di vita:
 dall’ingestione e trasformazione dei dati, fino all’esposizione tramite API REST e alla visualizzazione tramite dashboard BI.
 
@@ -108,7 +105,7 @@ project_root/
 │       └── amazon_pipeline.py     # pipeline specifica (entry point)
 ├── bi/
 │   └── dashboard.pbix              # Dashboard Power BI
-└── database/
+└── db/
     └── schema.sql
 ```
 ---
